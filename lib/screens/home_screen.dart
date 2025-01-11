@@ -44,12 +44,12 @@ class _HomeScreenState extends State<HomeScreen> {
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text('Logout'),
-            content: Text('Are you sure you want to logout?'),
+            title: const Text('Logout'),
+            content: const Text('Are you sure you want to logout?'),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context),
-                child: Text('Cancel'),
+                child: const Text('Cancel'),
               ),
               TextButton(
                 onPressed: () {
@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           PopupMenuButton<String>(
-            icon: CircleAvatar(
+            icon: const CircleAvatar(
               backgroundColor: Colors.white,
               child: Icon(
                 Icons.person,
@@ -95,11 +95,11 @@ class _HomeScreenState extends State<HomeScreen> {
             onSelected: handleMenuSelection,
             itemBuilder: (BuildContext context) {
               return [
-                PopupMenuItem(
+                const PopupMenuItem(
                   value: 'profile',
                   child: Text('Profile'),
                 ),
-                PopupMenuItem(
+                const PopupMenuItem(
                   value: 'logout',
                   child: Text('Logout'),
                 ),
@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedItemColor: Colors.redAccent,
         unselectedItemColor: Colors.white,
         backgroundColor: Colors.black,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }).toList();
 
     return filteredMovies.isEmpty
-        ? Center(child: CircularProgressIndicator())
+        ? const Center(child: CircularProgressIndicator())
         : ListView(
       children: [
         if (filteredMovies.isNotEmpty)
@@ -153,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
             child: Container(
-              margin: EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.0),
                 color: Colors.black.withOpacity(0.7),
@@ -170,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.black.withOpacity(0.5),
                     spreadRadius: 2,
                     blurRadius: 10,
-                    offset: Offset(0, 4),
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
@@ -183,7 +183,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
                       filteredMovies[0]['show']['name'],
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -199,7 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         '',
                       ) ??
                           'No summary available',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
@@ -224,8 +224,8 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
             child: Container(
-              margin: EdgeInsets.all(10.0),
-              padding: EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 color: Colors.grey[900],
@@ -242,14 +242,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           movie['show']['name'] ?? 'No title',
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -264,7 +264,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             '',
                           ) ??
                               'No summary available',
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white70,
                             fontSize: 14,
                           ),
