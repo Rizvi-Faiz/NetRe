@@ -5,13 +5,10 @@
 ## Photos
 
 ### Photo 1
-![Photo 1](path/to/photo1.jpg)
+![Screenshot 2025-01-11 102204](https://github.com/user-attachments/assets/6bc594cd-a144-49ec-882a-ce1ed8d111af)
+![Screenshot 2025-01-11 102226](https://github.com/user-attachments/assets/763bcfe0-60be-4ffb-9c89-f17f183e6eac)
+![Screenshot 2025-01-11 102234](https://github.com/user-attachments/assets/53a9478e-56be-426f-8952-9522ca1299ac)
 
-### Photo 2
-![Photo 2](path/to/photo2.jpg)
-
-### Photo 3
-![Photo 3](path/to/photo3.jpg)
 
 ## Features
 
